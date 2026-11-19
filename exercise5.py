@@ -77,6 +77,9 @@ class VigenereCipher:
         
         return shift_list
 
+    def __clean_text(self, text: str) -> str :
+        return "".join(char.upper() for char in text if char.isalpha())
+
     def encrypt(self, plaintext: str):
         """
         TO BE COMPLETED
